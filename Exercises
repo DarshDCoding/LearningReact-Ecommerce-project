@@ -60,3 +60,5 @@
     - (We don't do this for product images or ratings because each product can have a different image and rating. This makes importing difficult).
     //done...
 
+## 5k. We'll add a 404 (Not Found) page. Create a page that displays the <Header> and message "Page not Found" (Style it however you want).
+    - Create a <Route> with path="*" (this matches any URL path), set the element to your 404 page. Add this route to the bottom of <Routes> (if the URL does not match any other route, it will display your 404 page.)
