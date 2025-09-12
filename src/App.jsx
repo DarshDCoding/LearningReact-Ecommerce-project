@@ -9,6 +9,8 @@ function App() {
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="checkout" element={<CheckoutPage/>} />
+        <Route path="orders" element={<div>Orders page...</div>} />
+        <Route path="tracking" element={<div>Tracking page...</div>} />
       </Routes>
     </>
   );
