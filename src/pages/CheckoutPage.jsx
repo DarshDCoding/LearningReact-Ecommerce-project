@@ -1,7 +1,7 @@
 import './CheckoutPage.css';
 import './checkout-header.css';
 
-export const CheckoutPage = () => {
+const CheckoutPage = () => {
   return (
     <>
         <title>Checkout</title>
@@ -209,3 +209,5 @@ export const CheckoutPage = () => {
     </>
   );
 };
+
+export default CheckoutPage;
