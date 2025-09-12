@@ -1,17 +1,18 @@
 import "./Header.css";
+import { Link } from "react-router";
 
 const Header = () => {
   return (
     <>
       <div className="header">
         <div className="left-section">
-          <a href="/" className="header-link">
+          <Link to="/" className="header-link">
             <img className="logo" src="./src/assets/images/logo-white.png" />
             <img
               className="mobile-logo"
               src="./src/assets/images/mobile-logo-white.png"
             />
-          </a>
+          </Link>
         </div>
 
         <div className="middle-section">
@@ -26,18 +27,18 @@ const Header = () => {
         </div>
 
         <div className="right-section">
-          <a className="orders-link header-link" href="orders.html">
+          <Link className="orders-link header-link" to="/orders">
             <span className="orders-text">Orders</span>
-          </a>
+          </Link>
 
-          <a className="cart-link header-link" href="checkout.html">
+          <Link className="cart-link header-link" to="/checkout">
             <img
               className="cart-icon"
               src="./src/assets/images/icons/cart-icon.png"
             />
             <div className="cart-quantity">3</div>
             <div className="cart-text">Cart</div>
-          </a>
+          </Link>
         </div>
       </div>
     </>
