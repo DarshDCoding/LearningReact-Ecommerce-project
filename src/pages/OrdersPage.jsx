@@ -5,6 +5,11 @@ const OrdersPage = () => {
   return (
     <>
       <title>Orders</title>
+      <link
+        rel="icon"
+        type="image/svg+xml"
+        href="./src/assets/images/icons/orders-favicon.png"
+      />
 
       <Header />
 
