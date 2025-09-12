@@ -40,3 +40,14 @@
     - In index.html, remove <link rel="icon" href="...">
     - Open the website and switch pages. Notice the favicon changes.
     //done...
+
+### Challenges Exercises
+
+## 6h. We'll move the tracking page to React (open the website, go to the orders page, and click a "Track package" button).
+    - Move over the tracking page to React (open the website, go to the orders page, and click a "Track package" button).
+    - Download supersimple.dev/images/tracking-favicon.png and use it as the favicon.
+    - Move over the CSS, rename it to match the Component, and import.
+    - Create a route for the tracking page in App.jsx (use path="tracking").
+    - Open the website and test out the tracking page.
+    //Already did all this except adding favicon.
+    //done...
