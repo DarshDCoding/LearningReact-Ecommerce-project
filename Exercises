@@ -51,3 +51,6 @@
     - Open the website and test out the tracking page.
     //Already did all this except adding favicon.
     //done...
+
+## 6i. Using the Search section of VSCode (Ctrl + Shift + F on Windows or Command + Shift + F on Mac), find any other <a> elements in the code and replace them with <Link> component.
+    //done...
