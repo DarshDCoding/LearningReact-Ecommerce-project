@@ -1,17 +1,20 @@
-import './CheckoutPage.css';
-import './checkout-header.css';
+import "./CheckoutPage.css";
+import "./checkout-header.css";
 
 const CheckoutPage = () => {
   return (
     <>
-        <title>Checkout</title>
+      <title>Checkout</title>
 
       <div className="checkout-header">
         <div className="header-content">
           <div className="checkout-header-left-section">
             <a href="/">
               <img className="logo" src="./src/assets/images/logo.png" />
-              <img className="mobile-logo" src="./src/assets/images/mobile-logo.png" />
+              <img
+                className="mobile-logo"
+                src="./src/assets/images/mobile-logo.png"
+              />
             </a>
           </div>
 
@@ -35,7 +38,9 @@ const CheckoutPage = () => {
         <div className="checkout-grid">
           <div className="order-summary">
             <div className="cart-item-container">
-              <div className="delivery-date">Delivery date: Tuesday, June 21</div>
+              <div className="delivery-date">
+                Delivery date: Tuesday, June 21
+              </div>
 
               <div className="cart-item-details-grid">
                 <img
@@ -73,7 +78,9 @@ const CheckoutPage = () => {
                       name="delivery-option-1"
                     />
                     <div>
-                      <div className="delivery-option-date">Tuesday, June 21</div>
+                      <div className="delivery-option-date">
+                        Tuesday, June 21
+                      </div>
                       <div className="delivery-option-price">FREE Shipping</div>
                     </div>
                   </div>
@@ -84,8 +91,12 @@ const CheckoutPage = () => {
                       name="delivery-option-1"
                     />
                     <div>
-                      <div className="delivery-option-date">Wednesday, June 15</div>
-                      <div className="delivery-option-price">$4.99 - Shipping</div>
+                      <div className="delivery-option-date">
+                        Wednesday, June 15
+                      </div>
+                      <div className="delivery-option-price">
+                        $4.99 - Shipping
+                      </div>
                     </div>
                   </div>
                   <div className="delivery-option">
@@ -95,8 +106,12 @@ const CheckoutPage = () => {
                       name="delivery-option-1"
                     />
                     <div>
-                      <div className="delivery-option-date">Monday, June 13</div>
-                      <div className="delivery-option-price">$9.99 - Shipping</div>
+                      <div className="delivery-option-date">
+                        Monday, June 13
+                      </div>
+                      <div className="delivery-option-price">
+                        $9.99 - Shipping
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -104,7 +119,9 @@ const CheckoutPage = () => {
             </div>
 
             <div className="cart-item-container">
-              <div className="delivery-date">Delivery date: Wednesday, June 15</div>
+              <div className="delivery-date">
+                Delivery date: Wednesday, June 15
+              </div>
 
               <div className="cart-item-details-grid">
                 <img
@@ -113,7 +130,9 @@ const CheckoutPage = () => {
                 />
 
                 <div className="cart-item-details">
-                  <div className="product-name">Intermediate Size Basketball</div>
+                  <div className="product-name">
+                    Intermediate Size Basketball
+                  </div>
                   <div className="product-price">$20.95</div>
                   <div className="product-quantity">
                     <span>
@@ -140,7 +159,9 @@ const CheckoutPage = () => {
                       name="delivery-option-2"
                     />
                     <div>
-                      <div className="delivery-option-date">Tuesday, June 21</div>
+                      <div className="delivery-option-date">
+                        Tuesday, June 21
+                      </div>
                       <div className="delivery-option-price">FREE Shipping</div>
                     </div>
                   </div>
@@ -152,8 +173,12 @@ const CheckoutPage = () => {
                       name="delivery-option-2"
                     />
                     <div>
-                      <div className="delivery-option-date">Wednesday, June 15</div>
-                      <div className="delivery-option-price">$4.99 - Shipping</div>
+                      <div className="delivery-option-date">
+                        Wednesday, June 15
+                      </div>
+                      <div className="delivery-option-price">
+                        $4.99 - Shipping
+                      </div>
                     </div>
                   </div>
                   <div className="delivery-option">
@@ -163,8 +188,12 @@ const CheckoutPage = () => {
                       name="delivery-option-2"
                     />
                     <div>
-                      <div className="delivery-option-date">Monday, June 13</div>
-                      <div className="delivery-option-price">$9.99 - Shipping</div>
+                      <div className="delivery-option-date">
+                        Monday, June 13
+                      </div>
+                      <div className="delivery-option-price">
+                        $9.99 - Shipping
+                      </div>
                     </div>
                   </div>
                 </div>
