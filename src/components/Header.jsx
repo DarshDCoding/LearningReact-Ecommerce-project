@@ -1,10 +1,21 @@
+import axios from "axios";
 import "./Header.css";
 import { NavLink } from "react-router";
 import WhiteLogo from "../assets/images/logo-white.png";
 import SearchIcon from "../assets/images/icons/search-icon.png";
 import CartIcon from "../assets/images/icons/cart-icon.png"
+import { useEffect, useState } from "react";
 
-const Header = ({cart}) => {
+const Header = () => {
+  const [cart, setCart] = useState([]);
+  
+  useEffect(()=>{
+    axios.get("http://localhost:3000/api/cart-items")
+      .then(response =>{
+        setCart(response.data);
+      })
+  },[]);
+
   let totalQuantity=0;
   cart.forEach((cartItem)=>{
     totalQuantity += cartItem.quantity
