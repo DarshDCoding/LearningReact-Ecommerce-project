@@ -5,3 +5,5 @@ export function totalQuantity(cart) {
   });
   return totalQuantity;
 }
+
+// I am so frustrateddddd why the hell i created this when i can get the data form backend.

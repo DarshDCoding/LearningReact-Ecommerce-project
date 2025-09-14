@@ -2,16 +2,22 @@ import axios from "axios";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { formatMoney } from "../../utils/money";
-import { totalQuantity } from "../../utils/totalQunatity";
+// import { totalQuantity } from "../../utils/totalQunatity";
 import CheckoutHeader from "./CheckOutHeader";
 import "./CheckoutPage.css";
 
 const CheckoutPage = ({ cart }) => {
   const [deliveryOptions, setDeliveryOptions] = useState([]);
+  const [paymentSummary, setPaymentSummary] = useState(null);
+
   useEffect(() => {
     axios
       .get("/api/delivery-options?expand=estimatedDeliveryTime")
-      .then((response) => setDeliveryOptions(response.data));
+      .then(response => setDeliveryOptions(response.data));
+
+    axios
+      .get('/api/payment-summary')
+      .then(response => setPaymentSummary(response.data));
   }, []);
 
   return (
@@ -87,6 +93,7 @@ const CheckoutPage = ({ cart }) => {
                             key={deliveryOption.id}
                             className="delivery-option"
                           >
+
                             <input
                               type="radio"
                               checked={
@@ -119,8 +126,10 @@ const CheckoutPage = ({ cart }) => {
             <div className="payment-summary-title">Payment Summary</div>
 
             <div className="payment-summary-row">
-              <div>Items ({totalQuantity(cart)}):</div>
-              <div className="payment-summary-money">$42.75</div>
+             <div>Items ({paymentSummary ? paymentSummary.totalItems : 0}):</div>
+              <div className="payment-summary-money">{paymentSummary ? formatMoney(paymentSummary.productCostCents) : 0}
+                {/* rest for tommorow */}
+              </div>
             </div>
 
             <div className="payment-summary-row">
