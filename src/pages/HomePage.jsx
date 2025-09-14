@@ -4,7 +4,7 @@ import Header from "../components/Header";
 // import { products } from "../../starting-code/ecommerce-project/data/products";
 import "./HomePage.css";
 
-const HomePage = () => {
+const HomePage = ({cart}) => {
   const [products, setProducts] = useState([]);
   //   fetch('http://localhost:3000/api/products/')
   //   .then((response)=>{
@@ -29,7 +29,7 @@ const HomePage = () => {
         href="./src/assets/images/icons/home-favicon.png"
       />
 
-      <Header />
+      <Header cart={cart} />
       <div className="home-page">
         <div className="products-grid">
           {products.map((product) => {
