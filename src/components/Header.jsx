@@ -8,9 +8,9 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [cart, setCart] = useState([]);
-  
+
   useEffect(()=>{
-    axios.get("http://localhost:3000/api/cart-items")
+    axios.get("/api/cart-items")
       .then(response =>{
         setCart(response.data);
       })

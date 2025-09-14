@@ -14,7 +14,9 @@ const HomePage = () => {
   //   })
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/products").then((response) => {
+    // axios.get("http://localhost:3000/api/products")
+    axios.get("/api/products") //after setting server proxy in vite config...no need to add 
+    .then((response) => {
       setProducts(response.data);
     });
   }, []);
