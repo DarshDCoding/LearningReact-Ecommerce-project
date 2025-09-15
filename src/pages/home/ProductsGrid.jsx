@@ -1,25 +1,8 @@
 import { formatMoney } from "../../utils/money";
-import { useState, useEffect } from "react";
-import axios from "axios";
 
 
-export function ProductGrid() {
-  const [products, setProducts] = useState([]);
-  //   fetch('http://localhost:3000/api/products/')
-  //   .then((response)=>{
-  //   return response.json();
-  // }).then((data)=>{
-  //   console.log(data)
-  //   })
 
-  useEffect(() => {
-    // axios.get("http://localhost:3000/api/products")
-    axios
-      .get("/api/products") //after setting server proxy in vite config...no need to add
-      .then((response) => {
-        setProducts(response.data);
-      });
-  }, []);
+export function ProductGrid({products}) {
   return (
     <div className="products-grid">
       {products.map((product) => {
