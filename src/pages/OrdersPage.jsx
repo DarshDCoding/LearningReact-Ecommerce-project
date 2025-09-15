@@ -66,7 +66,7 @@ const OrdersPage = ({cart}) => {
                 <div className="product-delivery-date">
                   Arriving on: {dayjs(orderProduct.product.estimatedDeliveryTimeMs).format("MMMM D")}
                 </div>
-                <div className="product-quantity">Quantity: {orderProduct.product.quantity}</div>
+                <div className="product-quantity">Quantity: {orderProduct.quantity}</div>
                 <button className="buy-again-button button-primary">
                   <img
                     className="buy-again-icon"
