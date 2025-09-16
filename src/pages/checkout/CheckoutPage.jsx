@@ -18,6 +18,7 @@ const CheckoutPage = ({ cart }) => {
       response = await axios.get("/api/payment-summary")
         setPaymentSummary(response.data);
     };
+    console.log ("kuch to hua hai...kuch ho gaya hai....")
     getDeliveryData();
   }, []);
 

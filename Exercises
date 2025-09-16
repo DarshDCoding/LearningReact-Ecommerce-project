@@ -60,7 +60,30 @@
     - (We don't do this for product images or ratings because each product can have a different image and rating. This makes importing difficult).
     //done...
 
-## 5k. We'll add a 404 (Not Found) page. Create a page that displays the <Header> and message "Page not Found" (Style it however you want).
+## 6k. We'll add a 404 (Not Found) page. Create a page that displays the <Header> and message "Page not Found" (Style it however you want).
     - Create a <Route> with path="*" (this matches any URL path), set the element to your 404 page. Add this route to the bottom of <Routes> (if the URL does not match any other route, it will display your 404 page.)
 
 ...Everything is working fine after completing exercises...hence merging to main branch.
+
+ 
+ # Lession 7 Exercises
+
+ ## 7a. In OrdersPage.jsx, use async await to load the data insted of promise.
+        //done....
+
+## 7b. In OrderSummary.jsx, separate the cart item details into a componenet:
+    - Create a new component named CartItemDetails.
+    - Move <img ClassName ="product-image"> and <div className="cart-item-details"> into this new component.
+    //done...
+
+## 7c. In OrderSummary.jsx, separate the delivery-date into a component:
+    -Create a new component named DeliveryDate. Move the code that finds the selectedDeliveryOption into the componenet as well.
+    //done...
+
+## 7d. We saw useEffect runs twice due to <StrictMode>. In main.jsx, temporarily remove <StrictMode> and check that useEffect runs once.
+    - Running twice helps us catch bugs. (Running useEffect twice should result in the same HTML being rendered. This is called idempotency).
+    - This only happens in development. In Production (the website is on the Internet). <StrictMode> doesn't do anything. Add <StrictMode> back.
+    //done...
+
+## 7e. In OrdersPage.jsx, separate the <div className= "orders-grid"> into its own component, named OrdersGrid.
+    //done...
