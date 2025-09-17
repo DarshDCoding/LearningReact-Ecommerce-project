@@ -114,4 +114,12 @@
     - Destructure const params into const {orderId, productId}
     //done...everything is working.
 
+## 7k. Now, we'll load the data for the Tracking Page from the backend. Using axios, useEffect, and the orderId form the URL.
+    //insted of using axios, i'll be using async await.
+    - Make a request to `/api/orders/${orderId}?expand= products` this will load the order form the backend (with product details attached).
+        //done...
+    - Insted of the dependency array [], use [orderId]. This will re-run useEffect if orderId changes (reload the roder if orderId Changes.)
+        //aah done... but i don't quite understand.
+    - Save the order in useState with initial value of null. Before returning the HTML, check if the order is loaded using if (!order){return null;}.
+        //done maybe...
     

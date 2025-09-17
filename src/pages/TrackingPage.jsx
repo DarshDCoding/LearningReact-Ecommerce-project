@@ -1,11 +1,23 @@
 import { Link } from "react-router";
 import { useParams } from "react-router";
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import "./TrackingPage.css";
+import axios from "axios";
 
 const TrackingPage = ({ cart }) => {
   const params = useParams();
   const {orderId, productId} = params;
+  const [order, setOrder] = useState(null)
+
+  useEffect(()=>{
+    const getDetailsByOrderId = async () =>{
+      const response = await axios.get(`/api/orders/${orderId}?expand=products`);
+      setOrder(response.data)
+    };
+    getDetailsByOrderId();
+  }, [orderId])
+
   return (
     <>
       <title>Tracking</title>
@@ -18,7 +30,8 @@ const TrackingPage = ({ cart }) => {
 
       <Header cart={cart} />
 
-      <div className="tracking-page">
+      {!order? null:
+            <div className="tracking-page">
         <div className="order-tracking">
           <Link className="back-to-orders-link link-primary" href="/orders">
             View all orders
@@ -48,6 +61,7 @@ const TrackingPage = ({ cart }) => {
           </div>
         </div>
       </div>
+       } {/*We may need to undo what we did.*/}
     </>
   );
 };
