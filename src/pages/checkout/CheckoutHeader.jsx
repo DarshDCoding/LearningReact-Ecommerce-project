@@ -1,8 +1,8 @@
-import './CheckoutHeader.css';
 import { Link } from 'react-router';
-import GreenLogo from '../../assets/images/logo.png';
-import CheckoutLockIcon from '../../assets/images/icons/checkout-lock-icon.png'
 import { totalQuantity } from '../../utils/totalQunatity';
+import CheckoutLockIcon from '../../assets/images/icons/checkout-lock-icon.png'
+import GreenLogo from '../../assets/images/logo.png';
+import './CheckoutHeader.css';
 
 const CheckoutHeader = ({cart}) => {
   return (
