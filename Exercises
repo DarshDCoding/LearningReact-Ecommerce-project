@@ -94,3 +94,15 @@
     //done...
 
 ## 7g. In CheckoutPage, separate the header into a component (did this in lesson 6 exercises). Pass in the cart as a prop, display the total quantity.
+    //done...
+
+# Challenge Exercises
+
+## We'll display the tracking page using data from the backend. First, make sure you created the TrackingPage component and added it to the Router.
+    //done...
+
+## 7h. Open the orders page in the browser and click a "Track package" button. The tracking page will not work because there's a <Header /> in the page and it needs the cart. Pass the cart into <Header /> using a prop. Check the page works.
+    //have completed it already.
+
+## 7i. Find the "Track package" button in the code. It links to "/tracking". Update this so it links to `/tracking/${orderId}/${ProductId}` (insert the order and product ids into the string). Click "Track package", andnotice the order id and product id are not in the URL.
+    //done...yeah it is showing.
