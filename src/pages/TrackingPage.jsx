@@ -1,10 +1,11 @@
-
 import { Link } from "react-router";
+import { useParams } from "react-router";
 import Header from "../components/Header";
 import "./TrackingPage.css";
 
-const TrackingPage = ({cart}) => {
-
+const TrackingPage = ({ cart }) => {
+  const params = useParams();
+  const {orderId, productId} = params;
   return (
     <>
       <title>Tracking</title>

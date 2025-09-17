@@ -106,3 +106,12 @@
 
 ## 7i. Find the "Track package" button in the code. It links to "/tracking". Update this so it links to `/tracking/${orderId}/${ProductId}` (insert the order and product ids into the string). Click "Track package", andnotice the order id and product id are not in the URL.
     //done...yeah it is showing.
+
+## 7j. In order for the URL /tracking/${orderId}/${ProductId} to work, we also need to update the Router. In App.jsx, update the Router so the tracking page uses path="tracking/:orderId/:productId"
+    - :orderId and :productId are called URL params (parameters). We can replace them with any text, and this allows us to save an order id and a product id directly in the URL.
+    - To get these values out of the URL, in the TrackingPage, use the hook: import {useParams } from 'react-router'; then at the top of the TrakcingPage, urn const params = userParams();
+    - Try console.log(params); and open a tracking page. Notice params is an object that contains the orderId and productId form the URL. 
+    - Destructure const params into const {orderId, productId}
+    //done...everything is working.
+
+    
