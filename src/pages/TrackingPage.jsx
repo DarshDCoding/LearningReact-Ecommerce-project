@@ -40,6 +40,7 @@ const TrackingPage = ({ cart }) => {
               if (product.productId === productId) {
                 const totalDeliveryTimeMs = product.estimatedDeliveryTimeMs - order.orderTimeMs
                 const timePassedMs = dayjs().valueOf() - order.orderTimeMs;
+                // const timePassedMs = totalDeliveryTimeMs*0.7
                 const progress = (timePassedMs/totalDeliveryTimeMs)*100 
                 return (
                   <Fragment key={product.productId}>
@@ -62,11 +63,11 @@ const TrackingPage = ({ cart }) => {
                       />
 
                       <div className="progress-labels-container">
-                        <div className="progress-label">Preparing</div>
-                        <div className="progress-label current-status">
+                        <div className={`progress-label ${progress<=49 && 'current-status'}`} >Preparing</div>
+                        <div className={`progress-label ${(progress>=50 && progress < 100 ) && 'current-status' }`}>
                           Shipped
                         </div>
-                        <div className="progress-label">Delivered</div>
+                        <div className={`progress-label ${progress>=100 && 'current-status'}`}>Delivered</div>
                       </div>
 
                       <div className="progress-bar-container">
