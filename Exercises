@@ -126,4 +126,14 @@
         //done...
     -Go to the orders page, click "Track package" for some other products/ orders, and check that the details are correct.
         //done...
-    
+
+
+## 7l. We'll calculate the progress (how close the product is to delivery).
+    //First: orderProduct.estimatedDeliveryTimeMs - order.orderTimeMs gets the total time required for delivery(totalDeliveryTimeMs).  
+        -done... (finally reaching somewhere...)
+    //Then const timePassedMs = dayjs().valueOf() - order.orderTimeMs;
+    calculate  the amount of time that has passed since creating the order.
+    //Calculate (timePassedMs/totalDeliveryTimeMs)*100 this gives us the delivery progress as a percent (50% = halfway, 100% = delivered).
+    //Scroll down to the <div className="progress-bar"> and give it a prop style = {{width:`${deliveryPercent}%`}}. Refresh, and check that the progress bar now reflects the delivery percent.
+    //Temporarily update timePassedMs to totalDeliveryTimeMs *0.3 and refresh. Check that the progress bar is updated. Change it back after. 
+        -finally all done....
