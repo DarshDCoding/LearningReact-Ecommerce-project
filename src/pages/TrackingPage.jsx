@@ -44,7 +44,7 @@ const TrackingPage = ({ cart }) => {
                 return (
                   <Fragment key={product.productId}>
                       <div className="delivery-date">
-                        Arriving on{" "}
+                        {progress >= 100 ? "Delivered on": "Arriving on" }{" "}
                         {dayjs(product.estimatedDeliveryTimeMs).format(
                           "dddd, MMMM d"
                         )}

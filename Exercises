@@ -137,3 +137,6 @@
     //Scroll down to the <div className="progress-bar"> and give it a prop style = {{width:`${deliveryPercent}%`}}. Refresh, and check that the progress bar now reflects the delivery percent.
     //Temporarily update timePassedMs to totalDeliveryTimeMs *0.3 and refresh. Check that the progress bar is updated. Change it back after. 
         -finally all done....
+
+## 7m. If the percent is >=100, insted of "Arriving on" display "Delivered on".
+    -done...
