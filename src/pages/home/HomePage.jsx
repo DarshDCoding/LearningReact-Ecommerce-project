@@ -6,7 +6,7 @@ import axios from "axios";
 import "./HomePage.css";
 import { ProductGrid } from "./ProductsGrid";
 
-const HomePage = ({cart}) => {
+const HomePage = ({cart, loadCart}) => {
     const [products, setProducts] = useState([]);
   
     // using treditional fetch
@@ -53,7 +53,7 @@ const HomePage = ({cart}) => {
 
       <Header cart={cart} />
       <div className="home-page">
-        <ProductGrid products={products} />
+        <ProductGrid products={products} loadCart={loadCart} />
       </div>
     </>
   );

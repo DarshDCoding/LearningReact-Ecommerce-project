@@ -129,21 +129,22 @@
 
 
 ## 7l. We'll calculate the progress (how close the product is to delivery).
-    //First: orderProduct.estimatedDeliveryTimeMs - order.orderTimeMs gets the total time required for delivery(totalDeliveryTimeMs).  
+    - First: orderProduct.estimatedDeliveryTimeMs - order.orderTimeMs gets the total time required for delivery(totalDeliveryTimeMs).  
         -done... (finally reaching somewhere...)
-    //Then const timePassedMs = dayjs().valueOf() - order.orderTimeMs;
+    - Then const timePassedMs = dayjs().valueOf() - order.orderTimeMs;
     calculate  the amount of time that has passed since creating the order.
-    //Calculate (timePassedMs/totalDeliveryTimeMs)*100 this gives us the delivery progress as a percent (50% = halfway, 100% = delivered).
-    //Scroll down to the <div className="progress-bar"> and give it a prop style = {{width:`${deliveryPercent}%`}}. Refresh, and check that the progress bar now reflects the delivery percent.
-    //Temporarily update timePassedMs to totalDeliveryTimeMs *0.3 and refresh. Check that the progress bar is updated. Change it back after. 
+    - Calculate (timePassedMs/totalDeliveryTimeMs)*100 this gives us the delivery progress as a percent (50% = halfway, 100% = delivered).
+    - Scroll down to the <div className="progress-bar"> and give it a prop style = {{width:`${deliveryPercent}%`}}. Refresh, and check that the progress bar now reflects the delivery percent.
+    - Temporarily update timePassedMs to totalDeliveryTimeMs *0.3 and refresh. Check that the progress bar is updated. Change it back after. 
         -finally all done....
 
 ## 7m. If the percent is >=100, insted of "Arriving on" display "Delivered on".
     -done...
 
 ## 7n. We'll highlight the correct label based on the delivery percent:
-    // Check if the delivery percent is <33. Save it in a variable isPreparing.
-    // Check if the percent is >= 33 and <100. Save it in a variable isShipped.
-    // Chekc if the percent is === 100. Save it in a varibale isDelivered.
-    // Scroll down to the progress-label elements. If an element has the class current-status that means it will be hgighlighted in green.
-    // For each progress-label, change className to a template string, and only add the class current-status if it is the current stauts. Example: 'progress-label $ {isPreparing && "current-status"}`
+    - Check if the delivery percent is <33. Save it in a variable isPreparing.
+    - Check if the percent is >= 33 and <100. Save it in a variable isShipped.
+    - Chekc if the percent is === 100. Save it in a varibale isDelivered.
+    - Scroll down to the progress-label elements. If an element has the class current-status that means it will be hgighlighted in green.
+    - For each progress-label, change className to a template string, and only add the class current-status if it is the current stauts. Example: 'progress-label $ {isPreparing && "current-status"}`
+        done....
