@@ -71,7 +71,7 @@ const TrackingPage = ({ cart }) => {
                       </div>
 
                       <div className="progress-bar-container">
-                        <div className="progress-bar" style={{width:`${progress}%`}}></div>
+                        <div className="progress-bar" style={{width:`max(3%, ${progress}%)`}}></div>
                       </div>
                   </Fragment>
                 );
