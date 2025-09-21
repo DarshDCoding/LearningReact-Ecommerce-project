@@ -1,11 +1,18 @@
 import dayjs from "dayjs";
 import { Link } from "react-router";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
-export function OrderDetails({order}) {
+export function OrderDetails({ order, addToCart }) {
+  const [quantity, setQuantity] = useState(1);
   return (
     <div className="order-details-grid">
       {order.products.map((orderProduct) => {
+
+        const addToCartFunc = () => {
+          setQuantity(1)
+          addToCart(orderProduct.product, quantity);
+        };
+
         return (
           <Fragment key={orderProduct.product.id}>
             <div className="product-image-container">
@@ -22,7 +29,7 @@ export function OrderDetails({order}) {
               <div className="product-quantity">
                 Quantity: {orderProduct.quantity}
               </div>
-              <button className="buy-again-button button-primary">
+              <button className="buy-again-button button-primary" onClick={addToCartFunc}>
                 <img
                   className="buy-again-icon"
                   src="./src/assets/images/icons/buy-again.png"
