@@ -171,3 +171,14 @@
     //will do it later...continue from Product.jsx line:8.
     //done... by using the useRef hook to reset the timeOut everytime.
     // DO CHECK IT OUT IF YOU EVER NEED TO DO THIS TYPE OF TIMEOUT IN FUTURE.
+
+# Challenge Exercises
+
+## In the checkout page, we'll make the update quantity feature work.
+## 8e. First, go to the code for each cart item (inside OrderSummary.jsx or CartItemDetails.jsx) and find: <span className="quantity-label">
+    - Before this element, add a textbox: <input type="text"/>
+    - Add a className to this textbox. Style it with CSS and set width:50px;
+    //done...
+
+## 8f. Add a state to track if the quantity is being updated (initial value false). When clicking "Update" switch this state to between true and false. If the state is true show the textbox, otherwise show the quantity label.
+    //done...

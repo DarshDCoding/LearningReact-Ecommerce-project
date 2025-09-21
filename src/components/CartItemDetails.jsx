@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { formatMoney } from "../utils/money";
 
 export function CartItemDetails({ cartItem, deleteCartItem }) {
+  const [isUpdate, setIsUpdate]= useState(false);
+  const openUpdate =()=>{
+    isUpdate ? setIsUpdate(false): setIsUpdate(true)
+  }
   return (
     <>
       <img className="product-image" src={cartItem.product.image} />
@@ -13,9 +18,10 @@ export function CartItemDetails({ cartItem, deleteCartItem }) {
         <div className="product-quantity">
           <span>
             Quantity:
-            <span className="quantity-label">{cartItem.quantity}</span>
+            {isUpdate && <input type="text" style={{width:"50px"}} />}
+            {!isUpdate && <span className="quantity-label">{cartItem.quantity}</span>}
           </span>
-          <span className="update-quantity-link link-primary">Update</span>
+          <span className="update-quantity-link link-primary" onClick={openUpdate}>Update</span>
           <span className="delete-quantity-link link-primary" onClick={deleteCartItem} >Delete</span>
         </div>
       </div>
