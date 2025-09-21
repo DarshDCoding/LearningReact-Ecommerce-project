@@ -26,11 +26,9 @@ export function CartItemDetails({ cartItem, deleteCartItem, loadCart }) {
     loadCart();
   };
 
-  // const handelEnter = (event) =>{
-  //   if (event.target.key === "Enter"){
-  //     openUpdate();
-  //   }
-  // };
+  const handelEnter = (event) =>{
+    event.key === "Enter" && openUpdate()
+  };
 
   const getQuantity = (event) => {
     setQuantity(event.target.value);
@@ -59,6 +57,7 @@ export function CartItemDetails({ cartItem, deleteCartItem, loadCart }) {
                 }}
                 value={quantity}
                 onChange={getQuantity}
+                onKeyDown={handelEnter}
                 autoFocus
               />
             )}

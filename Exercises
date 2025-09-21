@@ -196,3 +196,5 @@
 ## 8i. We'll add keyboard events to the quantity input:
     - Add an onKeyDown prop to the input and give it a fucntion. The function gets a paramenter event and event.key has the key that was pressed.
     - If the key pressed is 'Enter', update the quantity in the backend (run the same function as wehn the "Update" link is pressed).
+    //done... and also added a feature to delete the item if user updates the quantity as 0.
+
