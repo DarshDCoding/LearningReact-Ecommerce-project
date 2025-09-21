@@ -191,4 +191,8 @@
     //done...
 
 ## 8h. If the isUpdating state is true and we click the "Update" link, send a request PUT /api/cart-items/:productId and send the backend an object with the property quantity (the value is the quantity saved in the previous exercise - remember to convert it to a number!). await the request, reload the cart, and set the isUpdating state to false.
-    //done... created a new css file just for handeling the input filed of CartItemDetails
+    //done... created a new css file just for handeling the input field of CartItemDetails
+
+## 8i. We'll add keyboard events to the quantity input:
+    - Add an onKeyDown prop to the input and give it a fucntion. The function gets a paramenter event and event.key has the key that was pressed.
+    - If the key pressed is 'Enter', update the quantity in the backend (run the same function as wehn the "Update" link is pressed).
