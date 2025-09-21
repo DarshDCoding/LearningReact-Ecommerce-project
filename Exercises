@@ -198,3 +198,8 @@
     - If the key pressed is 'Enter', update the quantity in the backend (run the same function as wehn the "Update" link is pressed).
     //done... and also added a feature to delete the item if user updates the quantity as 0.
 
+## We'll make the search bar at the top of the home page work.
+## 8j. Open the home page, and in the Header component, find the search bar <input className="search-bar">
+    - Create a controlled input for the search bar. Add an onClick prop to the search button. When clicked, console.log the search text (for now).
+    - Check the search bar also works on the orders page and tracking page.
+    //done...

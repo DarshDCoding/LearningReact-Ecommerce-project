@@ -4,8 +4,19 @@ import { NavLink } from "react-router";
 import WhiteLogo from "../assets/images/logo-white.png";
 import SearchIcon from "../assets/images/icons/search-icon.png";
 import CartIcon from "../assets/images/icons/cart-icon.png"
+import { useState } from "react";
 
 const Header = ({cart}) => {
+  const [search, setSearch] = useState("");
+  
+  const getSearch =(event) =>{
+    setSearch(event.target.value);
+  }
+
+  const searchBtnFunc =()=>{
+    console.log(search)
+  }
+
   return (
     <>
       <div className="header">
@@ -20,9 +31,9 @@ const Header = ({cart}) => {
         </div>
 
         <div className="middle-section">
-          <input className="search-bar" type="text" placeholder="Search" />
+          <input className="search-bar" type="text" placeholder="Search" value={search} onChange={getSearch} />
 
-          <button className="search-button">
+          <button className="search-button" onClick={searchBtnFunc}>
             <img
               className="search-icon"
               src={SearchIcon}
