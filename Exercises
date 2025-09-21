@@ -182,3 +182,13 @@
 
 ## 8f. Add a state to track if the quantity is being updated (initial value false). When clicking "Update" switch this state to between true and false. If the state is true show the textbox, otherwise show the quantity label.
     //done...
+
+## 8g. We'll create a controlled input for the quantity textbox.
+    - Create a state for the quantity in the textbox: quantity, setQuantity and set the initial value to cartItem.quantity.
+    - Add a prop value = {quantity} to the input element.
+    - Add a prop onChange ={} to the input element and give it a function.
+    - The function gets a parameter called event. Get the text in the textbox using event.target.value and save it in the state using setQuantity.
+    //done...
+
+## 8h. If the isUpdating state is true and we click the "Update" link, send a request PUT /api/cart-items/:productId and send the backend an object with the property quantity (the value is the quantity saved in the previous exercise - remember to convert it to a number!). await the request, reload the cart, and set the isUpdating state to false.
+    //done... created a new css file just for handeling the input filed of CartItemDetails
