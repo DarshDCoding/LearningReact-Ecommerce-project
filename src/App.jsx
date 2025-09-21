@@ -24,6 +24,7 @@ function App() {
     });
     await loadCart();
   };
+
   useEffect(() => {
     loadCart();
   }, []);

@@ -6,6 +6,7 @@ import "./OrdersPage.css";
 
 const OrdersPage = ({ cart, addToCart }) => {
   const [orders, setOrders] = useState([]);
+window.axios = axios;
 
   useEffect(() => {
     const getOrdersWithProduct = async () => {
