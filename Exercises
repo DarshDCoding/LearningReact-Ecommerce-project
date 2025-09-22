@@ -212,3 +212,7 @@
     - Get the search text using const [searchParams] = useSearchparams(); and const search = searchParams.get('search');
     - When loading the products, if search exists, use this URL path insted: /api/products?search=${search} (also add search to the dependency array. vAlues form outside of useEffect should be in dependency array).
     - In the Header, also get the search text out of the url. If it exists, set it as the initial value of the search state. Try it out to see if search bar works!
+
+    //Done...but needed to take help form solutions.
+
+    

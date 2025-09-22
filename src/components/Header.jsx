@@ -1,15 +1,20 @@
-import { useNavigate } from "react-router";
 import { useState } from "react";
+import { NavLink, useNavigate, useSearchParams } from "react-router";
 import { totalQuantity } from "../utils/totalQunatity";
-import { NavLink } from "react-router";
 import "./Header.css";
+
 import WhiteLogo from "../assets/images/logo-white.png";
 import SearchIcon from "../assets/images/icons/search-icon.png";
 import CartIcon from "../assets/images/icons/cart-icon.png"
 
+
 const Header = ({cart}) => {
-  const [search, setSearch] = useState("");
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams();
+
+  const searchText = searchParams.get('search')
+  
+  const [search, setSearch] = useState(searchText || "");
   
   const getSearch =(event) =>{
     setSearch(event.target.value);
@@ -17,6 +22,7 @@ const Header = ({cart}) => {
 
   const searchBtnFunc =()=>{
     navigate(`/?search=${search}`)
+    setSearch("")
   }
 
   return (
