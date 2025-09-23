@@ -25,7 +25,8 @@ export function Product({ product, addToCart }) {
   return (
     <div className="product-container">
       <div className="product-image-container">
-        <img className="product-image" src={product.image} />
+        <img className="product-image" src={product.image}
+        data-testid="product-image" />
       </div>
 
       <div className="product-name limit-text-to-2-lines">{product.name}</div>
@@ -36,6 +37,7 @@ export function Product({ product, addToCart }) {
           src={`./src/assets/images/ratings/rating-${
             product.rating.stars * 10
           }.png`}
+          data-testid="rating-image"
         />
         <div className="product-rating-count link-primary">
           {product.rating.count}
