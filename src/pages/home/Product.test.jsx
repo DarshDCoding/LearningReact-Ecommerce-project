@@ -10,6 +10,7 @@ describe("Product Component", () => {
   let product;
   let loadCart;
   let addToCart;
+    const user = userEvent.setup();
 
 beforeEach(()=>{ //test hook
   product= {
@@ -59,10 +60,18 @@ beforeEach(()=>{ //test hook
       <Product product={product} loadCart={loadCart} addToCart={addToCart} />
     );
 
-    const user = userEvent.setup();
+      // const user = userEvent.setup();
     const addToCartBtn = screen.getByTestId("add-to-cart-btn");
     await user.click(addToCartBtn);
-
     expect(addToCart).toHaveBeenCalledWith(product, 1);
   });
+
+    it("Adds quantity to the cart", async () => {
+        render(
+            <Product product={product} loadCart={loadCart} addToCart={addToCart}/>
+        )
+        const addQuantityBtn = screen.getByTestId("add-quantity-btn");
+        expect(addQuantityBtn).toHaveValue("1");
+    })
 });
+

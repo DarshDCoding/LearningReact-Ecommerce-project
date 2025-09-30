@@ -215,4 +215,16 @@
 
     //Done...but needed to take help form solutions.
 
-    
+# Chapter 9 Exercises - Automated Tests in React
+
+## 9a. Add a test for formatMoney and check if it works with the number 0, (the result should be '$0.00').
+    //done...
+
+## 9b. Add a test for formatMoney and check if it works with negative numbers like -999 and -100 (the result should be '- $ 9.99' and '-$ 1.00')
+    - Your test will fail at first. Read the output of vitest to see why it failed.
+    - Modify formatMoney so the test passes.
+    //done...
+
+## 9c. Add a test for the Product component to test if it can select a quantity.
+    - Get the quantity selector from the screen (add a test id first) and save it in a variable called quantitySelector
+    - expect() has another method called .toHaveValue(value). Use this check to the quantity selector has the value '1'
